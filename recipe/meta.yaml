@@ -10,7 +10,7 @@ source:
   sha256: 5559d9508c4d90506a8a03a2ae62441944b99b60710268adb9aafd64f092f2d4
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   script: 
     - ./configure --prefix={{ PREFIX }}
@@ -22,6 +22,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - make
   host:
     - ncurses
   run:
