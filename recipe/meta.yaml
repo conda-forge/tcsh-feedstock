@@ -1,5 +1,5 @@
 {% set name = "tcsh" %}
-{% set version = "6.20.00" %}
+{% set version = "6_22_02" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   sha256: 5559d9508c4d90506a8a03a2ae62441944b99b60710268adb9aafd64f092f2d4
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
   script: 
     - ./configure --prefix={{ PREFIX }}
