@@ -1,16 +1,16 @@
 {% set name = "tcsh" %}
-{% set version = "6.20.00" %}
+{% set version = "6_22_02" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: {{ version | replace("_", ".") }}
 
 source:
-  url: https://github.com/tcsh-org/tcsh/archive/TCSH6_20_00.tar.gz
-  sha256: 5559d9508c4d90506a8a03a2ae62441944b99b60710268adb9aafd64f092f2d4
+  url: https://github.com/tcsh-org/tcsh/archive/TCSH{{ version }}.tar.gz
+  sha256: f4f1ba643a5b36718f80709dadf81ded65356e3c82d3f548c68f57e9f61295b6
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
   script: 
     - ./configure --prefix={{ PREFIX }}
