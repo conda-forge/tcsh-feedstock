@@ -5,7 +5,7 @@ Home: https://web.archive.org/web/20100212221424/http://www.tcsh.org/Home
 
 Package license: Public Domain
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: tcsh shell is an enhanced but completely compatible version of the Berkeley UNIX C shell
 
@@ -29,7 +29,7 @@ Current build status
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/tcsh-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/tcsh-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr>
