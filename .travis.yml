@@ -3,14 +3,11 @@
 
 language: generic
 
-env:
-  global:
-    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    - secure: "Eed6sUKoi2KOC2R5dkhqqqtEQutB2GpxlkxhqPLoqstiMrAH5P92FFLrBlNg2UJ+x805+LRkMq9eFgM0jrO0rb8kMjOZ8bvxYtQsU3LHuxe3WJNQfnl2YXBk0zRPH31fa9Nim8h6dFs7EXmj0df/lwmSvZCdfUJy1BwBtnQva6A7cdlcdneyLp6JwnyWCHoi3NDlAF+HoKVSVzwhRB3MlNrLkxFFPYziG6npaN0f2h5FD5UF5h40Uo0TDBmHr5qFecwujvM1OKyBZQrlH2C+uLgn53/J7S/uxUNvVWevGOfe5IBUoUZUmodLGNrkd01l0uXuJsaakYSWAGkphpWTpBu4zViUr+Mfes+kWpRMnEtQKbXdBVNpOlqJ+1VSHX2HeaxOALhI5+3sUVEkUe3kJjkWUyP5TnhZW9R1w8X9QAsf8+yCMJnpsL3aLeiLkVPThgkK9XhXzKajwB13bhq0AllsagvqlK0YUj1eaiQLN6HTq0JfpfkS/KofQGh7FoAu4EI5Zzqn2hcGIv9av7UzRqllgH+EwoWxO2TPdO5WjyGP0OnHB5c5Mvjr0xBa76V/8hE9PAOK8O0u2VnpvwRVIMBqa5gzGGcZL3ETKCP/A2siJKFsPUaM08tMBFaoiUGcqqu24nU9szIYCS0aKH5Iy4RQOKOvBaVgE6rG1Dqd/Os="
+
 
 matrix:
   include:
-    - env: CONFIG=linux_ppc64le_ UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_ UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
 
