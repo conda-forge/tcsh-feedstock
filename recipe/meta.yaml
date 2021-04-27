@@ -34,7 +34,7 @@ test:
 
 about:
   home: https://web.archive.org/web/20100212221424/http://www.tcsh.org/Home
-  license: Public Domain
+  license: BSD-3-Clause
   license_file: Copyright
   summary: tcsh shell is an enhanced but completely compatible version of the Berkeley UNIX C shell
   description: |
