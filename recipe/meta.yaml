@@ -13,6 +13,11 @@ build:
   number: 0
   skip: true  # [win]
   script:
+    # tcsh does NOT recognize arm64 and expect arm
+    # this sed call just edits the config.sub file to
+    # replace all mentions of arm to arm64 and thus faking it to pass
+    # however, this also leads to a version: unknown-apple-darwin in test
+    # but, we don't test that... we should probably file an issue upstream...
     - mv config.sub config.sub_old; sed 's/arm/arm64/g' config.sub_old > config.sub  # [osx and arm64]
     - ./configure --prefix={{ PREFIX }}
     - make
