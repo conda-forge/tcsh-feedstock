@@ -13,6 +13,7 @@ build:
   number: 0
   skip: true  # [win]
   script:
+    - mv config.sub config.sub_old; sed 's/arm/arm64/g' config.sub_old > config.sub  # [osx and arm64]
     - ./configure --prefix={{ PREFIX }}
     - make
     - make install
