@@ -19,7 +19,7 @@ build:
     # however, this also leads to a version: unknown-apple-darwin in test
     # but, we don't test that... we should probably file an issue upstream...
     # issue upstream: https://github.com/tcsh-org/tcsh/issues/46
-    - sed -i -e 's/arm/arm64/g' config.sub  # [osx and arm64]
+    - sed -i -e 's/arm/arm64/g' build-aux/config.sub  # [osx and arm64]
     - ./configure --prefix={{ PREFIX }}
     - make
     - make install
