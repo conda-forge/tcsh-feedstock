@@ -1,5 +1,5 @@
 {% set name = "tcsh" %}
-{% set version = "6_24_05" %}
+{% set version = "6_24_07" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,12 @@ package:
 
 source:
   url: https://github.com/tcsh-org/tcsh/archive/TCSH{{ version }}.tar.gz
-  sha256: db7d78fc92a251cab13f2c14980e7cfae8cf358d4426cde6b521cc726c7b845a
+  sha256: c853f235508e9b66b2fc99c38d28d6af7e3ed6baa3f8ac9563f6a1012b27c380
 
 build:
   number: 0
   skip: true  # [win]
   script:
-    # tcsh does NOT recognize arm64 and expect arm
-    # this sed call just edits the config.sub file to
-    # replace all mentions of arm to arm64 and thus faking it to pass
-    # however, this also leads to a version: unknown-apple-darwin in test
-    # but, we don't test that... we should probably file an issue upstream...
-    # issue upstream: https://github.com/tcsh-org/tcsh/issues/46
-    - sed -i -e 's/arm/arm64/g' build-aux/config.sub  # [osx and arm64]
     - ./configure --prefix={{ PREFIX }}
     - make
     - make install
