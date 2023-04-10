@@ -1,11 +1,11 @@
-About tcsh
-==========
+About tcsh-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tcsh-feedstock/blob/main/LICENSE.txt)
 
 Home: https://web.archive.org/web/20100212221424/http://www.tcsh.org/Home
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tcsh-feedstock/blob/main/LICENSE.txt)
 
 Summary: tcsh shell is an enhanced but completely compatible version of the Berkeley UNIX C shell
 
