@@ -1,5 +1,5 @@
 {% set name = "tcsh" %}
-{% set version = "6_24_9" %}
+{% set version = "6_24_10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tcsh-org/tcsh/archive/TCSH{{ version }}.tar.gz
-  sha256: 974787ab7f6b60ec901c9e9c7ef33b28cf7cdbe07a65e0f19a07d2cbe6f80dd7
+  sha256: a5d18d38fcccb038bd0c978e69984927cb7711c5adb8fabcc347edc9a46ac76d
 
 build:
   number: 0
