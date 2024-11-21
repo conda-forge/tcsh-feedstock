@@ -14,7 +14,7 @@ build:
   skip: true  # [win]
   script:
     - ./configure --prefix={{ PREFIX }}
-    - CC=${CC} CFLAGS="${CFLAGS} -DNO_CRYPT" make -j
+    - CC=${CC} make -j
     - make install
     - make install.man
 
@@ -26,8 +26,10 @@ requirements:
     - make
   host:
     - ncurses
+    - libxcrypt
   run:
     - ncurses
+    - libxcrypt
 
 test:
   commands:
