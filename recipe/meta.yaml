@@ -10,11 +10,11 @@ source:
   sha256: a5d18d38fcccb038bd0c978e69984927cb7711c5adb8fabcc347edc9a46ac76d
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script:
     - ./configure --prefix={{ PREFIX }}
-    - make
+    - CC=${CC} make -j
     - make install
     - make install.man
 
@@ -22,11 +22,14 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - make
   host:
     - ncurses
+    - libxcrypt
   run:
     - ncurses
+    - libxcrypt
 
 test:
   commands:
