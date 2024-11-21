@@ -14,7 +14,7 @@ build:
   skip: true  # [win]
   script:
     - ./configure --prefix={{ PREFIX }}
-    - make
+    - CC=${CC} CFLAGS="${CFLAGS} -DNO_CRYPT" make -j
     - make install
     - make install.man
 
